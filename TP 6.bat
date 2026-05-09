@@ -3,7 +3,7 @@
 
 :menu
 cls
-echo 
+echo
 echo ----------------------------------------------------
 echo
 echo 1) Verificar el Bucle Local
