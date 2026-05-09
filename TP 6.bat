@@ -7,15 +7,15 @@ echo
 echo ----------------------------------------------------
 echo
 echo 1) Verificar el Bucle Local
-echo 
+echo
 echo 2) Obtener IP de la placa
-echo 
+echo
 echo 3) Prueba de Conectividad Estandar
-echo 
+echo
 echo 4) Monitoreo Continuo (Parimetro -t)
-echo 
+echo
 echo 5) Definir Cantidad de Paquetes
-echo 
+echo
 echo 6) Prueba de Carga (Paquetes de 1000 bytes)
 echo
 echo 7) Resolucion de nombres
