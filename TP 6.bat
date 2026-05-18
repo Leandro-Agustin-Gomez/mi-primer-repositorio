@@ -6,24 +6,27 @@ cls
 echo
 echo ----------------------------------------------------
 echo
-echo 1) Verificar el Bucle Local
+echo 1) Verificar el Bucle Local.
 echo
-echo 2) Obtener IP de la placa
+echo 2) Obtener IP de la placa.
 echo
-echo 3) Prueba de Conectividad Estandar
+echo 3) Prueba de Conectividad Estandar.
 echo
-echo 4) Monitoreo Continuo (Parimetro -t)
+echo 4) Monitoreo Continuo (Parimetro -t).
 echo
-echo 5) Definir Cantidad de Paquetes
+echo 5) Definir Cantidad de Paquetes.
 echo
-echo 6) Prueba de Carga (Paquetes de 1000 bytes)
+echo 6) Prueba de Carga (Paquetes de 1000 bytes).
 echo
-echo 7) Resolucion de nombres
+echo 7) Resolucion de nombres.
 echo
-echo 8) Salir
+echo 8) Salir.
 echo
+echo 9) Nslookup.
+echo
+echo 10) Tracert.
 echo ----------------------------------------------------
-set /p opcion=Seleccione una opcion (1-8): 
+set /p opcion=Seleccione una opcion (1-10): 
 
 if %opcion%==1 goto loopback
 if %opcion%==2 goto ipconfig
@@ -33,6 +36,8 @@ if %opcion%==5 goto cantidad
 if %opcion%==6 goto carga
 if %opcion%==7 goto resolucion
 if %opcion%==8 goto salir
+if %opcion%==9 goto Nslookup
+if %opcion%==10 goto Tracert
 
 :loopback
 echo.
@@ -87,3 +92,17 @@ goto menu
 :salir
 echo Espere un segundo, saliendo desde el menu.
 exit
+
+:Nslookup
+echo.
+set /p dominio=Ingrese el dominio o IP para consultar en el DNS: 
+nslookup %dominio%
+pause
+goto menu
+
+:Tracert
+echo.
+set /p destino=Ingrese la URL o IP para trazar la ruta: 
+tracert %destino%
+pause
+goto menu
